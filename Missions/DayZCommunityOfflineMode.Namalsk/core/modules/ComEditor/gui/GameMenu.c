@@ -26,6 +26,9 @@ class GameMenu extends PopupMenu
 		m_gameScriptList.AddItem( "Spawn Sedan", 	 new Param1< string >( "SpawnSedan" ), 	   0 );
         m_gameScriptList.AddItem( "Spawn Gunter 2",  new Param1< string >( "SpawnGunter" ),    0 );
         m_gameScriptList.AddItem( "Spawn Sarka",     new Param1< string >( "SpawnSarka" ),     0 );
+	        m_gameScriptList.AddItem( "Spawn M3S",		 	new Param1< string >( "SpawnM3S" ), 	   0 );
+		m_gameScriptList.AddItem( "Spawn M3S Blue",		new Param1< string >( "SpawnM3SBlue" ), 	   0 );
+		m_gameScriptList.AddItem( "Spawn M3S Orange",	new Param1< string >( "SpawnM3SOrange" ), 	   0 );
 //      m_gameScriptList.AddItem( "Spawn V3S",		 new Param1< string >( "SpawnV3S" ), 	   0 );
 //		m_gameScriptList.AddItem( "Spawn V3S_Cargo", new Param1< string >( "SpawnV3SCargo" ),  0 );
 //		m_gameScriptList.AddItem( "Spawn Bus", 		 new Param1< string >( "SpawnBus" ), 	   0 );
@@ -190,6 +193,39 @@ class GameMenu extends PopupMenu
 		};
 
 		SpawnVehicle( "Sedan_02", attArr );
+	}
+
+	void SpawnM3S() 
+	{
+		TStringArray attArr = {
+		"HeadlightH7", "HeadlightH7", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_WheelDouble","Truck_01_WheelDouble", "Truck_01_WheelDouble","Truck_01_WheelDouble",
+		"TruckBattery","Truck_01_Hood",
+		"Truck_01_Door_1_1","Truck_01_Door_2_1","Barrel_Green","Barrel_Green","Barrel_Green","Barrel_Green","WoodenCrate","WoodenCrate","WoodenCrate","WoodenCrate"
+		};
+
+		SpawnVehicle( "Truck_01_Covered", attArr );
+	}
+
+	void SpawnM3SBlue() 
+	{
+		TStringArray attArr = {
+		"HeadlightH7", "HeadlightH7", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_WheelDouble","Truck_01_WheelDouble", "Truck_01_WheelDouble","Truck_01_WheelDouble",
+		"TruckBattery","Truck_01_Hood_Blue",
+		"Truck_01_Door_1_1_Blue","Truck_01_Door_2_1_Blue","Barrel_Green","Barrel_Green","Barrel_Green","Barrel_Green","WoodenCrate","WoodenCrate","WoodenCrate","WoodenCrate"
+		};
+
+		SpawnVehicle( "Truck_01_Covered_Blue", attArr );
+	}
+
+	void SpawnM3SOrange() 
+	{
+		TStringArray attArr = {
+		"HeadlightH7", "HeadlightH7", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_Wheel","Truck_01_Wheel", "Truck_01_WheelDouble","Truck_01_WheelDouble", "Truck_01_WheelDouble","Truck_01_WheelDouble",
+		"TruckBattery","Truck_01_Hood_Orange",
+		"Truck_01_Door_1_1_Orange","Truck_01_Door_2_1_Orange","Barrel_Green","Barrel_Green","Barrel_Green","Barrel_Green","WoodenCrate","WoodenCrate","WoodenCrate","WoodenCrate"
+		};
+
+		SpawnVehicle( "Truck_01_Covered_Orange", attArr );
 	}
 
 	void SpawnV3SCargo() 
